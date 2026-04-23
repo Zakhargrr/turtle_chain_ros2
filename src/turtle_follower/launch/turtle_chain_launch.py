@@ -3,6 +3,7 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import TimerAction
+from launch.substitutions import LaunchConfiguration
 import launch
 
 def generate_launch_description():
@@ -40,7 +41,7 @@ def generate_launch_description():
         parameters=[{
             'my_name': 'turtle2',
             'target_name': 'turtle1',
-            'speed': 1.5,
+            'speed': LaunchConfiguration('follower_speed'),
             'spawn_x': 1.0,
             'spawn_y': 1.0,
             'spawn_theta': 0.0
@@ -56,7 +57,7 @@ def generate_launch_description():
         parameters=[{
             'my_name': 'turtle3',
             'target_name': 'turtle2',
-            'speed': 1.5,
+            'speed': LaunchConfiguration('follower_speed'),
             'spawn_x': 9.0,
             'spawn_y': 9.0,
             'spawn_theta': 0.0
@@ -77,7 +78,7 @@ def generate_launch_description():
         parameters=[{
             'my_name': 'turtle4',
             'target_name': 'turtle3',
-            'speed': 1.5,
+            'speed': LaunchConfiguration('follower_speed'),
             'spawn_x': 1.0,
             'spawn_y': 1.0,
             'spawn_theta': 0.0
@@ -98,7 +99,7 @@ def generate_launch_description():
         parameters=[{
             'my_name': 'turtle5',
             'target_name': 'turtle4',
-            'speed': 1.5,
+            'speed': LaunchConfiguration('follower_speed'),
             'spawn_x': 9.0,
             'spawn_y': 9.0,
             'spawn_theta': 0.0

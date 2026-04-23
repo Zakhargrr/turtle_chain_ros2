@@ -13,6 +13,7 @@ def generate_launch_file(count):
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import TimerAction
+from launch.substitutions import LaunchConfiguration
 import launch
 
 def generate_launch_description():
@@ -59,7 +60,7 @@ def generate_launch_description():
         parameters=[{{
             'my_name': '{my_name}',
             'target_name': '{target_name}',
-            'speed': 1.5,
+            'speed': LaunchConfiguration('follower_speed'),
             'spawn_x': {spawn_x},
             'spawn_y': {spawn_y},
             'spawn_theta': 0.0
