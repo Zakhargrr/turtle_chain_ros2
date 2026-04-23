@@ -21,6 +21,10 @@ source install/setup.bash
 ```bash
 python3 src/turtle_follower/generate_launch.py 10
 ```
+### Пересобрать пакет
+```bash
+colcon build --packages-select turtle_follower
+```
 ### Запустить сгенерированную конфигурацию
 ```bash
 ros2 launch turtle_follower turtle_chain_launch.py
