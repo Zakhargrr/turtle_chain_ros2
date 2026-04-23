@@ -29,10 +29,6 @@ colcon build --packages-select turtle_follower
 ```bash
 ros2 launch turtle_follower turtle_chain_launch.py
 ```
-### Запуск с пользовательской скоростью ведомых черепах
-```bash
-ros2 launch turtle_follower turtle_chain_launch.py follower_speed:=2.0
-```
 
 ## Использование
 
