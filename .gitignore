@@ -1,0 +1,12 @@
+build/
+devel/
+log/
+install/
+*.log
+__pycache__/
+*.pyc
+.catkin_workspace
+.vscode/
+.idea/
+*.swp
+.DS_Store
